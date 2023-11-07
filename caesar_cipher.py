@@ -32,7 +32,7 @@ def caesar_cipher(original_text, offset, language):
         if 0 <= place + offset < len(n):
             res.append(n[place + offset])
         elif place + offset >= len(n):
-            res.append(n[(1 - place - offset) % (len(n) - 1)])
+            res.append(n[(place + offset) % (len(n))])
         elif place + offset < 0:
             res.append(n[(place + offset) % len(n)])
 
